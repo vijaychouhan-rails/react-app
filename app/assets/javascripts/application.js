@@ -19,5 +19,6 @@
 //= require react_bootstrap
 //= require react_router
 //= require react_router_ujs
+//= require lodash
 //= require components
 // require_tree .
