@@ -1,4 +1,4 @@
-var TodoList = React.createClass({
+var RootPage = React.createClass({
 
   getInitialState: function(){
     return {albums: JSON.parse(this.props.albums)};

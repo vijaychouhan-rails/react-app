@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get 'is_signed_in', to: 'auth#is_signed_in?'
     get 'signin', to: 'auth#signin'
   end
-#   get "/*path" => "home#index"
+  get "/*path" => "home#index"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

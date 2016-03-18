@@ -1,3 +1,3 @@
-// require routes
 //= require_tree ./components
+//= require routes
 

@@ -1,2 +1,2 @@
-<%#= react_router 'MyRoutes', 'HistoryLocation', { foo: 'Foo' }, { prerender_location: @location_path } %>
-<%= react_component('TodoList', {albums: @albums.to_json}, {prerender: true}) %>
+<%= react_router 'MyRoutes', 'HistoryLocation', { albums: @albums.to_json }, { prerender_location: @location_path } %>
+<%#= react_component('TodoList', {albums: @albums.to_json}, {prerender: true}) %>
