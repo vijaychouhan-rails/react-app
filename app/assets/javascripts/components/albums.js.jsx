@@ -1,4 +1,4 @@
-var RootPage = React.createClass({
+var Albums = React.createClass({
 
   getInitialState: function(){
     return {albums: JSON.parse(this.props.albums)};

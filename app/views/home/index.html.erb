@@ -1,2 +1,5 @@
-<%= react_router 'MyRoutes', 'HistoryLocation', { albums: @albums.to_json }, { prerender_location: @location_path } %>
+<%= react_router 'AppRoutes', 'HistoryLocation', { albums: @albums.to_json, current_user: user_signed_in? }, { prerender_location: @location_path } %>
 <%#= react_component('TodoList', {albums: @albums.to_json}, {prerender: true}) %>
+
+<!-- http://stackoverflow.com/questions/30644270/react-router-component-undefined -->
+<!-- http://ricostacruz.com/cheatsheets/react.html -->

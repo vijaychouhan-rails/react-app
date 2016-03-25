@@ -1,11 +1,12 @@
 var Route = ReactRouter.Route,
   DefaultRoute = ReactRouter.DefaultRoute;
 
-this.MyRoutes = (
+this.AppRoutes = (
   <Route handler={App}>
-    <DefaultRoute handler={HelloWorld} />
-    <Route handler={AnotherPage} path='page1'/>
-    <Route handler={RootPage} path='page2'/>
+    <DefaultRoute handler={Albums} />
+    <Route handler={AboutUs} path='about-us' />
+    <Route handler={Albums} path='albums' />
+    <Route handler={Login} path='/login' />
   </Route>
 );
 
