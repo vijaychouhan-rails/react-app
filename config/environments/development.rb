@@ -40,5 +40,5 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.react.variant = :development
-  config.react_router_variant = :development
+  #config.react_router_variant = :development
 end

@@ -14,11 +14,10 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require react
 //= require react_ujs
-//= require react_bootstrap
-//= require react_router
-//= require react_router_ujs
+//= require react-router/umd/ReactRouter
 //= require lodash
 //= require components
-// require_tree .
+//= require_tree .

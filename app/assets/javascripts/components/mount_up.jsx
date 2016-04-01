@@ -1,3 +1,9 @@
+var Router = window.ReactRouter.Router
+var Route = window.ReactRouter.Route
+var IndexRoute = window.ReactRouter.IndexRoute
+var History = window.ReactRouter.browserHistory
+var Link = window.ReactRouter.Link
+
 var Albums = React.createClass({
 
   getInitialState: function(){
