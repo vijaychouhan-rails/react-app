@@ -1,7 +1,10 @@
 class HomeController < ApplicationController
   def index
+  end
+
+  def albums
     @albums = Album.all
-    @location_path = "/#{params[:path]}"
+    render json: {albums: @albums}
   end
 
 end

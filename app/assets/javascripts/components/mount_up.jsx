@@ -30,6 +30,10 @@ var MountUp = React.createClass({
                 <li>
                   <Link to="/index">Index</Link>
                 </li>
+
+                <li>
+                  <Link to="/album">Album</Link>
+                </li>
               </ul>
 
             </div>
