@@ -13,7 +13,7 @@ var Nav = React.createClass({
     return (
       <Router history={browserHistory}>
         <Route path="/" component={MountUp}>
-          <Route path="repos" component={Index}/>
+          <Route path="index" component={Index}/>
           <Route path="about" component={About}/>
         </Route>
       </Router>
