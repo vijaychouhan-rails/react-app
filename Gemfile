@@ -33,7 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'browserify-rails'
-gem 'react-rails'
+gem 'react-rails', '~> 1.6.2'
 gem 'bootstrap-sass'
 #gem 'react-bootstrap-rails'
 gem "therubyracer"

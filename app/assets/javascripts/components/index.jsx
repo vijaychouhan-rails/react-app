@@ -1,11 +1,13 @@
-class Index extends React.Component {
-
-  render() {
-    return(
-      <div className="jumbotron">
-        <h3>Please help me!</h3>
+About = require ('./about.jsx');
+var Index = React.createClass({
+  render: function() {
+    return (
+      <div className="widgets">
+        I am index page
+        <About />
       </div>
-    )
+    );
   }
+});
 
-}
+module.exports = Index;

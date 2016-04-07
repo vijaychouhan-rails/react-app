@@ -22,14 +22,17 @@ module PhotoStudy
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    config.browserify_rails.commandline_options = '-t [ babelify --presets [es2015 react] ]'
+    #config.browserify_rails.commandline_options = '-t [ babelify --presets [es2015 react] ]'
     config.react.addons = true
-    config.react.server_renderer_options = {
-      files: ['application-server.js'],
-      replay_console: true,
-    }
+    config.browserify_rails.commandline_options = "--transform reactify --extension=\".jsx\""
     config.to_prepare do
       DeviseController.respond_to :html, :json
     end
+    
+    config.react.server_renderer_options = {
+        files: ["components.js"] # files to load for prerendering
+      }
+
+
   end
 end

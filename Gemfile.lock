@@ -142,7 +142,7 @@ GEM
     rake (10.5.0)
     rdoc (4.2.2)
       json (~> 1.4)
-    react-rails (1.5.0)
+    react-rails (1.6.2)
       babel-transpiler (>= 0.7.0)
       coffee-script-source (~> 1.8)
       connection_pool
@@ -212,7 +212,7 @@ DEPENDENCIES
   mysql2 (>= 0.3.13, < 0.5)
   pry
   rails (= 4.2.5)
-  react-rails
+  react-rails (~> 1.6.2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
