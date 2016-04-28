@@ -1,3 +1,18 @@
+=============
+Cheat sheet
+http://ricostacruz.com/cheatsheets/react.html
+=============
+
+
+
+
+
+
+
+
+
+
+
 React with Node Modules
 gem 'browserify-rails'
 gem 'react-rails'

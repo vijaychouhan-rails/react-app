@@ -1,3 +1,8 @@
+var Test = require ('./test.jsx');
+var NewAlbum = require ('./new_album.jsx');
+var routerModule = require('react-router');
+var Link = routerModule.Link
+
 var Album = React.createClass({
   getInitialState: function() {
     return {data: []};
@@ -20,27 +25,40 @@ var Album = React.createClass({
   render: function() {
     var albums = this.state.data.map(function(album, i){
       return(
-        <div className='col-md-4 albums-contaniner' key={i}>
-          <div className='col-md-12'>
-            {album.title}
-          </div>
-          <div className='col-md-12'>
-            <img src={'http://localhost:3000' + '/assets/car.jpg'} width="200px" height="200px"/>
-          </div>
-          <div className='col-md-12'>
-            {album.description}
-          </div>
-          <div>
-          </div>
-        </div>
+        <AlbumDetails album={album} key={i}/>
       )
     })
     return(
       <div>
+        <div className='col-md-12'><Link to="/new_album">New</Link></div>
         {albums}
       </div>
     )
   }
 });
 
+var AlbumDetails = React.createClass({
+  render: function(){
+    return(
+      <div>
+        <div className='col-md-4 albums-contaniner'>
+          <div className='col-md-12'>
+            {this.props.album.title}
+          </div>
+          <div className='col-md-12'>
+            <img src={'http://localhost:3000' + '/assets/car.jpg'} width="200px" height="200px"/>
+          </div>
+          <div className='col-md-12'>
+            {this.props.album.description}
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+})
+
+
+//module.exports = AlbumDetails;
 module.exports = Album;

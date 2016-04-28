@@ -7,6 +7,7 @@ var About = require ('./about.jsx');
 var Index = require ('./index.jsx');
 var MountUp = require ('./mount_up.jsx');
 var Album = require ('./album.jsx');
+var NewAlbum = require ('./new_album.jsx')
 
 var Nav = React.createClass({
 
@@ -17,6 +18,7 @@ var Nav = React.createClass({
           <Route path="index" component={Index}/>
           <Route path="about" component={About}/>
           <Route path="album" component={Album}/>
+          <Route path="new_album" component={NewAlbum}/>
         </Route>
       </Router>
         
