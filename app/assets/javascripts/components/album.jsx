@@ -1,6 +1,8 @@
 var Test = require ('./test.jsx');
 var NewAlbum = require ('./new_album.jsx');
 var routerModule = require('react-router');
+var Auth = require ('./auth.js');
+var browserHistory = routerModule.browserHistory
 var Link = routerModule.Link
 
 var Album = React.createClass({
@@ -9,17 +11,19 @@ var Album = React.createClass({
   },
 
   componentDidMount: function() {
-    $.ajax({
-      url: '/albums',
-      dataType: 'json',
-      cache: false,
-      success: function(data) {
-        this.setState({data: data.albums});
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this.props.url, status, err.toString());
-      }.bind(this)
-    });
+    if(Auth.authenticate()){
+      $.ajax({
+        url: '/albums',
+        dataType: 'json',
+        cache: false,
+        success: function(data) {
+          this.setState({data: data.albums});
+        }.bind(this),
+        error: function(xhr, status, err) {
+          console.error(this.props.url, status, err.toString());
+        }.bind(this)
+      });
+    }
   },
 
   render: function() {
@@ -30,7 +34,7 @@ var Album = React.createClass({
     })
     return(
       <div>
-        <div className='col-md-12'><Link to="/new_album">New</Link></div>
+        <div className='col-md-12'><Link to="/new_album" className='btn btn-primary'>New</Link></div>
         {albums}
       </div>
     )
