@@ -1,29 +1,29 @@
 var Test = require ('./test.jsx');
 var NewAlbum = require ('./new_album.jsx');
 var routerModule = require('react-router');
-var Auth = require ('./auth.js');
+var AuthenticateMixin = require ('./auth.js');
 var browserHistory = routerModule.browserHistory
 var Link = routerModule.Link
 
 var Album = React.createClass({
+  mixins: [AuthenticateMixin],
   getInitialState: function() {
     return {data: []};
   },
 
   componentDidMount: function() {
-    if(Auth.authenticate()){
-      $.ajax({
-        url: '/albums',
-        dataType: 'json',
-        cache: false,
-        success: function(data) {
-          this.setState({data: data.albums});
-        }.bind(this),
-        error: function(xhr, status, err) {
-          console.error(this.props.url, status, err.toString());
-        }.bind(this)
-      });
-    }
+    console.log("Test")
+    $.ajax({
+      url: '/albums',
+      dataType: 'json',
+      cache: false,
+      success: function(data) {
+        this.setState({data: data.albums});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error(this.props.url, status, err.toString());
+      }.bind(this)
+    });
   },
 
   render: function() {
